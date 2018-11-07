@@ -2,62 +2,12 @@
 <html>
 <head>
 	<title>Dunia21 Instant Downloader</title>
-	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<h1>Dunia21 Instant Downloader</h1>
 	<input type="text" name="country" id="autocomplete"/>
 	<div style="margin-top:500px"><h6><strong>*gausah protes sama desainnya</strong></h6></div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		$(function() {
-			var availableTags = [
-		      "ActionScript",
-		      "AppleScript",
-		      "Asp",
-		      "BASIC",
-		      "C",
-		      "C++",
-		      "Clojure",
-		      "COBOL",
-		      "ColdFusion",
-		      "Erlang",
-		      "Fortran",
-		      "Groovy",
-		      "Haskell",
-		      "Java",
-		      "JavaScript",
-		      "Lisp",
-		      "Perl",
-		      "PHP",
-		      "Python",
-		      "Ruby",
-		      "Scala",
-		      "Scheme"
-		    ];
-		    var autocompleteOptions = {
-		      source: function(request, response) {
-		      	var arr = []
-		      	var coba = []
-		      	$.getJSON("https://search.dunia21.net?s="+request.term, function(data) {
-		      		$.each(data.results, function(key, value) {
-		      			// arr.push({
-		      			// 	label: value.title,
-		      			// 	value: value.slug
-		      			// })
-		      			coba.push(value.title)
-		      		})
-		      		// var w = $.map(data.results, function(key, value) {
-		      		// 	return value
-		      		// })
-		      		response(coba) 
-		      		console.log(coba)
-		      	})
-		      }
-		    };
-		    $("#autocomplete").autocomplete(autocompleteOptions)
-		})
-	</script>
 </body>
 </html>
